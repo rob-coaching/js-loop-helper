@@ -102,7 +102,7 @@ In case we want to build up a NUMBER we start with 0 as default.
 
 In case we want to build up a STRING we start with "" as default.
 
-### Scenario 2 - Input = ARRAY. Output = OBJECT
+### Scenario 3 - Input = ARRAY. Output = OBJECT
 
 #### Case 1: Find a certain item by criteria
 
