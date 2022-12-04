@@ -12,6 +12,23 @@ Can we use some strategy to make it easy for us to start?
 
 By analyzing the demanded OUTPUT, we usually can decide which JS methods to use quite easily!
 
+To give you the mapping table right away:
+
+| INPUT  |      OUTPUT      |  Scenario                                     | Loop suggestion |
+|--------|:----------------:|----------------------------------------------:|----------------:|
+| ARRAY  | ARRAY            | Produce LESS Array Items than input items     | filter          |
+| ARRAY  | ARRAY            | Mutate / Update each item                     | forEach         |
+| ARRAY  | ARRAY            | Create new FORMAT for each item               | map             |
+| ARRAY  | NUMBER or STRING | Build up a statistic from all items, e.g. sum | reduce          |
+| ARRAY  | OBJECT           | Find exactly ONE item in the array            | find            |
+| ARRAY  | OBJECT           | Build up multiple statistics from all items   | reduce          |
+| NUMBER | ARRAY            | Split up a number into items, e.g. coins      | while loop      |
+
+Hint: Instead of all the specialized methods (filter, map, reduce, find) you can always choose to just use forEach instead.
+forEach is the GENERAL tool for (almost) everything. Map, reduce, filter, find are useful for specific scenarios (that you can see in the table)
+
+Following we take a look at some concrete examples.
+
 ### Scenario 1 - Input = ARRAY. Output = ARRAY
 
 Now it is time to analyze WHAT operation should be applied to get to the OUTPUT array.
@@ -56,29 +73,8 @@ Creating new array / copy: use `map` loop:
 
 `const fruitsCopy = fruits.map(fruit => fruit.toUpperCase()) // creates copy`
 
-### Scenario 2 - Input = ARRAY. Output = OBJECT
 
-#### Case 1: Find a certain item by criteria
-
-This is the easiest case. We look for a certain item, so just ONE item, in the array.
-
-Loop candidates: `find // (forEach or reduce are not really helpful here...)`
-
-
-#### Case 2: Create Statistics
-
-In case we want to BUILD UP an object with NEW info, we typically wanna build some statistics (e.g. counting items or calculating sums)
-
-Example: 
-
-```
-INPUT: ['apple', 'apple', 'banana', 'apple']
-OUTPUT: { apple: 3, banana: 1 } // count up all items found 
-```
-
-Loop candidates: `reduce or forEach // (as default we use an empty object in both cases)`
-
-### Scenario 3 - Input: ARRAY, Output: Number oder String 
+### Scenario 2 - Input: ARRAY, Output: Number oder String 
 
 In this case we want to loop over all items and usually want to count something up, build a sum or concatenate certain .items
 
@@ -105,6 +101,28 @@ Loop candidates: `reduce, forEach`
 In case we want to build up a NUMBER we start with 0 as default.
 
 In case we want to build up a STRING we start with "" as default.
+
+### Scenario 2 - Input = ARRAY. Output = OBJECT
+
+#### Case 1: Find a certain item by criteria
+
+This is the easiest case. We look for a certain item, so just ONE item, in the array.
+
+Loop candidates: `find // (forEach or reduce are not really helpful here...)`
+
+#### Case 2: Create Statistics
+
+In case we want to BUILD UP an object with NEW info, we typically wanna build some statistics (e.g. counting items or calculating sums)
+
+Example: 
+
+```
+INPUT: ['apple', 'apple', 'banana', 'apple']
+OUTPUT: { apple: 3, banana: 1 } // count up all items found 
+```
+
+Loop candidates: `reduce or forEach // (as default we use an empty object in both cases)`
+
 
 ### Scenario 4 - Input: Number, Output: Array 
 
