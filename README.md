@@ -20,8 +20,8 @@ To give you the mapping table right away:
 | ARRAY  | ARRAY            | Mutate / Update each item                     | forEach         |
 | ARRAY  | ARRAY            | Create new FORMAT for each item               | map             |
 | ARRAY  | NUMBER or STRING | Build up a statistic from all items, e.g. sum | reduce          |
-| ARRAY  | OBJECT           | Find exactly ONE item in the array            | find            |
 | ARRAY  | OBJECT           | Build up multiple statistics from all items   | reduce          |
+| ARRAY  | OBJECT           | Find exactly ONE item in the array            | find            |
 | NUMBER | ARRAY            | Split up a number into items, e.g. coins      | while loop      |
 
 Hint: Instead of all the specialized methods (filter, map, reduce, find) you can always choose to just use forEach instead.
