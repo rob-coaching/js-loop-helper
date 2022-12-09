@@ -76,7 +76,7 @@ Creating new array / copy: use `map` loop:
 
 ### Scenario 2 - Input: ARRAY, Output: Number oder String 
 
-In this case we want to loop over all items and usually want to count something up, build a sum or concatenate certain .items
+In this case we want to loop over all items and usually want to count something up, build a sum or concatenate certain items to a new string.
 
 Example I: 
 ```
@@ -145,7 +145,9 @@ But we usually can also ALWAYS use a for i loop (for counting loop) to do the sa
 Other case: We get some input and don't know in advance how many items we have to loop over.
 
 Example: 
-We get a file and need to process all files in there. But we don't know how many lines the file has. In this case often the WHILE loop is used until we reached the END of the file (=no more lines available => stop)
+We get a file and need to process all lines in there. But we don't know how many lines the file has. 
+
+In this case often the WHILE loop is used until we reached the END of the file (=no more lines available => stop)
 
 ### Summary 
 
