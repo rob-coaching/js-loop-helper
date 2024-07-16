@@ -48,7 +48,7 @@ OUTPUT: New array with all apple items: ['apple','apple','apple']
 
 #### Case II: Change / Update / Format
 
-If after our function the AMOUNT of items in the OUTPUT array should stay THE SAME than in the input array, typically we don't need to filter anything.
+If after application of our function the AMOUNT of items in the OUTPUT array should stay THE SAME than in the input array, typically we don't need to filter anything.
 
 Instead we must loop through ALL items and CHANGE either one or several elements.
 
