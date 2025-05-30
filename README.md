@@ -101,7 +101,7 @@ OUTPUT: COUNT of apples // 3
 Example III:
 ```
 INPUT: ["G", "a", "e", "l]
-OUTPUT: "Gael"
+OUTPUT: Concatenate to a string => "Gael" (in this simple case "join" method of array could be used)
 ```
 
 Loop candidates: `reduce, forEach`
