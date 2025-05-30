@@ -158,14 +158,12 @@ OUTPUT: [25,25,25,25,25,25,25,25]
 
 We will likely produce MORE output items than we have input items. Then we typically use the WHILE loop.
 
-But we usually can also ALWAYS use a for i loop (for counting loop) to do the same.
-
 Other case: We get some input and don't know in advance how many items we have to loop over.
 
 Example: 
-We get a file and need to process all lines in there. But we don't know how many lines the file has. 
+We get a file and need to process line by line to search something in the file. But we don't know how many lines the file has or at which line the thing we look for is written.
 
-In this case often the WHILE loop is used until we reached the END of the file (=no more lines available => stop)
+In this case often the WHILE loop is used until we find the line we are looking for or until we reached the END of the file (=no more lines available => stop)
 
 ### Summary 
 
