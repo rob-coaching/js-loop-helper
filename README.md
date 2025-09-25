@@ -50,17 +50,15 @@ OUTPUT: New array with all apple items: ['apple','apple','apple']
 
 #### Case II: Change / Update / Format
 
-If after application of our function the AMOUNT of items in the OUTPUT array should stay THE SAME than in the input array, typically we don't need to filter anything.
-
-Instead we must loop through ALL items and CHANGE either one or several elements.
+If the AMOUNT of items in the OUTPUT array should stay THE SAME as in the input array, typically we must loop through ALL items and change one or several elements.
 
 Loop candidates: `map, forEach`
 
-Example:
+Example: Uppercase ALL items
 
 ```
 INPUT: ['apple', 'banana', 'cherry']
-OUTPUT: ['APPLE', 'BANANA', 'CHERRY'] (uppercase all items!)
+OUTPUT: ['APPLE', 'BANANA', 'CHERRY']
 ```
 
 Now we have to decide two sub cases:
