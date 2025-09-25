@@ -39,7 +39,7 @@ Now it is time to analyze WHAT operation should be applied to get to the OUTPUT 
 
 If after our function the amount of items in the OUTPUT Array should be LESS than the amount of INPUT items, that typically means we should FILTER some items out!  
 
-Loop candidates: `filter or forEach`
+Loop candidates: `filter, forEach`
 
 Example: 
 
@@ -48,7 +48,7 @@ INPUT Fruit array : ['apple', 'banana', 'banana', 'apple', 'apple']
 OUTPUT: New array with all apple items: ['apple','apple','apple']
 ```
 
-#### Case II: Change / Update / Format
+#### Case II: Change / Update / Format item(s) in Array
 
 If the AMOUNT of items in the OUTPUT array should stay THE SAME as in the input array, typically we must loop through ALL items and change one or several elements.
 
@@ -80,6 +80,8 @@ Creating new array / copy: use `map` loop:
 
 In this case we want to loop over all items and usually want to count something up, build a sum or concatenate certain items to a new string.
 
+Loop candidates: `reduce, forEach`
+
 Example I: 
 ```
 INPUT: [1,2,3,4]
@@ -98,9 +100,20 @@ INPUT: ["G", "a", "e", "l]
 OUTPUT: Concatenate to a string => "Gael" (in this simple case the "join" method of array could be used instead of a loop)
 ```
 
-Loop candidates: `reduce, forEach`
-
 In case we want to build up a NUMBER we start with 0 as default.
+
+Example forEach:
+
+```
+let sum = 0;
+arr.forEach(num => sum += num) // loop through all numbers in array, adding the to sum. Use 0 as default sum
+```
+
+Example reduce:
+
+```
+const sum = arr.reduce((sum, num) => sum + num, 0) // loop through all numbers in array, adding the to sum. Use 0 as default sum
+```
 
 In case we want to build up a STRING we start with "" as default.
 
@@ -116,9 +129,11 @@ This is the easiest case. We look for a certain item, so just ONE item, in the a
 
 Loop candidates: `find // (forEach or reduce are not really helpful here...)`
 
-#### Case 2: Create Statistics
+#### Case 2: Create Statistics object
 
-In case we want to BUILD UP an object with NEW info, we typically wanna build some statistics (e.g. counting items or calculating sums)
+In case we want to BUILD UP an object with NEW info that we can build up from our data, we typically wanna build some statistics (e.g. counting items or calculating sums)
+
+Loop candidates: `reduce, forEach // (as default we use an empty object in both cases)`
 
 Example: 
 
@@ -126,8 +141,6 @@ Example:
 INPUT: ['apple', 'apple', 'banana', 'apple']
 OUTPUT: { apple: 3, banana: 1 } // count up all items found 
 ```
-
-Loop candidates: `reduce or forEach // (as default we use an empty object in both cases)`
 
 
 ### Scenario 4
