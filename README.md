@@ -31,9 +31,7 @@ Following we take a look at some concrete examples.
 
 ### Scenario 1
 
-Input = ARRAY
-
-Output = ARRAY
+#### Input = ARRAY => Output = ARRAY
 
 Now it is time to analyze WHAT operation should be applied to get to the OUTPUT array.
 
@@ -80,9 +78,7 @@ Creating new array / copy: use `map` loop:
 
 ### Scenario 2
 
-Input: ARRAY
-
-Output: Number oder String 
+#### Input: ARRAY => Output: NUMBER or STRING
 
 In this case we want to loop over all items and usually want to count something up, build a sum or concatenate certain items to a new string.
 
@@ -101,7 +97,7 @@ OUTPUT: COUNT of apples // 3
 Example III:
 ```
 INPUT: ["G", "a", "e", "l]
-OUTPUT: Concatenate to a string => "Gael" (in this simple case "join" method of array could be used)
+OUTPUT: Concatenate to a string => "Gael" (in this simple case the "join" method of array could be used instead of a loop)
 ```
 
 Loop candidates: `reduce, forEach`
@@ -112,9 +108,7 @@ In case we want to build up a STRING we start with "" as default.
 
 ### Scenario 3
 
-Input = ARRAY
-
-Output = OBJECT
+#### Input = ARRAY => Output = OBJECT
 
 Usually here we try to find some object in the array or build up a statistics object from all or a part of the array items.
 
@@ -140,9 +134,7 @@ Loop candidates: `reduce or forEach // (as default we use an empty object in bot
 
 ### Scenario 4
 
-Input: Number
-
-Output: Array 
+#### Input: NUMBER => Output: ARRAY 
 
 Loop candidates: WHILE Loop or FOR Count Loop (using i)
 
