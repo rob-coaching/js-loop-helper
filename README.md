@@ -111,7 +111,8 @@ Example reduce:
 const sum = arr.reduce((sum, num) => sum + num, 0) // loop through all numbers in array, adding the to sum. Use 0 as default sum
 ```
 
-In case we want to build up a STRING we start with "" as default.
+In case we want to build up a STRING we start with "" (empty string) as default.
+
 
 ### Scenario 3: Input = ARRAY => Output = OBJECT
 
