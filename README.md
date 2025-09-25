@@ -124,6 +124,14 @@ This is the easiest case. We look for a certain item, so just ONE item, in the a
 
 Loop candidates: `find // (forEach or reduce are not really helpful here...)`
 
+Example - find a unique item in the list, e.g. by an "ID"
+
+```
+INPUT: [{ id: "i1", item: "apple" }, { id: "i2", item: "banana" }, { id: "i3", item: "cherry" }]
+OUTPUT: { id: "i2", item: "banana" } // we are looking for the item with the ID "i2" in the array. happens to be that delicious banana
+```
+
+
 #### Case 2: Create Statistics object
 
 In case we want to BUILD UP an object with NEW info that we can build up from our data, we typically wanna build some statistics (e.g. counting items or calculating sums)
