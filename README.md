@@ -29,9 +29,7 @@ forEach is the GENERAL tool for (almost) everything. Map, reduce, filter, find a
 
 Following we take a look at some concrete examples.
 
-### Scenario 1
-
-#### Input = ARRAY => Output = ARRAY
+### Scenario 1: Input = ARRAY => Output = ARRAY
 
 Now it is time to analyze WHAT operation should be applied to get to the OUTPUT array.
 
@@ -74,9 +72,7 @@ Creating new array / copy: use `map` loop:
 `const fruitsCopy = fruits.map(fruit => fruit.toUpperCase()) // creates copy`
 
 
-### Scenario 2
-
-#### Input: ARRAY => Output: NUMBER or STRING
+### Scenario 2: Input = ARRAY => Output: NUMBER or STRING
 
 In this case we want to loop over all items and usually want to count something up, build a sum or concatenate certain items to a new string.
 
@@ -117,9 +113,7 @@ const sum = arr.reduce((sum, num) => sum + num, 0) // loop through all numbers i
 
 In case we want to build up a STRING we start with "" as default.
 
-### Scenario 3
-
-#### Input = ARRAY => Output = OBJECT
+### Scenario 3: Input = ARRAY => Output = OBJECT
 
 Usually here we try to find some object in the array or build up a statistics object from all or a part of the array items.
 
@@ -143,9 +137,7 @@ OUTPUT: { apple: 3, banana: 1 } // count up all items found
 ```
 
 
-### Scenario 4
-
-#### Input: NUMBER => Output: ARRAY 
+### Scenario 4: Input = NUMBER => Output = ARRAY 
 
 Loop candidates: WHILE Loop or FOR Count Loop (using i)
 
